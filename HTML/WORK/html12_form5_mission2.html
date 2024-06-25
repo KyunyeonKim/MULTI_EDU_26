@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="html12_link.css">
+    
+</head>
+<body>
+    <h1>오늘의 미션</h1>
+    <!-- 회원가입폼을 작성하세요. 아이디id,비번pw,이름name,전화번호tel
+    등을 전송하는 폼을 작성하세요.(전송방식get)
+    테이블을 사용하여 깔끔하게 보이도록 하세요 -->
+
+
+    <form action="#" method="get">
+        <table border="1">
+            <tr>
+                <td><label for="id">아이디:</label></td>
+                <td><input type="text" name="id" id="id" value="홍길동" required placeholder="아이디를 입력해주세요"></td>
+            </tr>
+            <tr>
+                <td><label for="pw">비밀번호:</label></td>
+                <td><input type="password" name="pw" id="pw"required placeholder="비밀번호를 입력해주세요"></td>
+            </tr>
+            <tr>
+                <td><label for="name">이름:</label></td>
+                <td><input type="text" name="name" id="name"required placeholder="이름을 입력해주세요"></td>
+            </tr>
+            <tr>
+                <td><label for="tel">전화번호:</label></td>
+                <td><input type="tel" name="tel" id="tel" required placeholder="전화번호를 입력해주세요"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="submit" value="회원가입하기">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

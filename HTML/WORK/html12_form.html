@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>form</h1>
+    <!--파일전송시 사용 <form action="#" method="get" enctype="multipart/form-data"></form> -->
+
+    <form action="#" method="get">
+        <!--key=name , value=들어갈값 id="유니크한 즉 개인이 가지고있는 명시적인 이름 javascript와css용"-->
+        <label for="name">이름:</label> <input type="text" name="name" id= "name"value="홍길동"><br> 
+        <label for="name">국어:</label> <input type="text" name="kor" id="kor" value="99"><br>
+        <label for="name">영어:</label> <input type="text" name="eng" id="eng"value="88"><br>
+        <label for="name">수학:</label> <input type="text" name="math" id="math"value="77"><br>
+        <input type="submit">
+    </form>
+
+
+
+    <!--  줄 띄어쓰기를 사용할려면 </p> 태그를 사용한다  -->
+    <form action="#" method="get">
+        <table border="1">
+            <tr>
+                <td> <label for="name">이름:</label></td>
+                <td><input type="text" name="name" id= "name"value="홍길동"></p></td>
+            </tr>
+
+            <tr>
+                <td><label for="kor">국어:</label></td>
+                <td><input type="text" name="kor" id="kor" value="99"></td>
+            </tr>
+
+            <tr>
+                <td> <label for="eng">영어:</label></td>
+                <td><input type="text" name="eng" id="eng"value="88"></td>
+            </tr>
+
+            <tr>
+                <td><label for="math">수학:</label> </td>
+                <td><input type="text" name="math" id="math"value="77"></td>
+            </tr>
+
+            
+                <input type="submit"></p>
+            
+        </table>
+        
+       
+      
+       
+
+    </form>
+
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>그외의 form</h1>
+    <form action="#" method="get">
+        <input type="radio" name="gender" id="gender" value="man" checked>남
+        <input type="radio" name="gender" id="gender" value="woman">여<br>
+        <input type="date" name="birthday" id="birthday"><br>
+        <input type="datetime-local" name="dtime" id="dtime"><br>
+        <input type="color" name="dcolor" id="dcolor"><br>
+        <input type="hidden" name="num" id="num" value="33"><br>
+        <input type="button" name="btn" id="btn" value="click"><br>
+        <input type="range" name="wdata" id="wdata" value=""><br>
+        <button>click2전송버튼 이벤트 충돌 주의</button>
+        <input type="submit">
+    </form>
+    <button>click3</button>
+    <hr>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <input type="text" name="name" id="name" value="김길동"><br>
+        <input type="file" name="file1" id="file1"><br>
+        <input type="submit" value="업로드"><br>
+    </form>
+</body>
+</html>

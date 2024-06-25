@@ -4,37 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table{
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            width: 100%;
+            
+        }
+
+
+        #t02,table{
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            width: 100%;
+            
+        }
+        #t01,th,td{
+            border: 1px solid #0ac100;
+            padding: 8px;
+        }
+
+        #t02 th,#t02 td{
+            border: 1px solid #242053;
+            padding: 8px;
+        }
+        tr{
+            background-color: #a6a6a6;
+        }
+        #t01 tr:hover{
+            background-color: #d5d5d5;
+        }
+        th{
+            background-color: #505050;
+            color: azure;
+        }
+
+
+        #t01 tr{
+            background-color: #1ba144;
+        }
+
+        #t02 tr:nth-child(even){
+            background-color: #505050;
+        }
+
+        #t02 tr:nth-child(2){
+            background-color: aqua;
+        }
+        
+    </style>
 </head>
 <body>
-    <table border="1">
-        <thead>Practice
-    <tr>
-        <th>국</th>
-        <th>영</th>
-        <th>수</th>
-        <th>과</th>
-        <th>사</th>
-    </tr>
-</thead>
+   <table id="t01">
+        <!-- <col><col><col><col> 생략가능-->
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>김길동</td>
+                <td>99</td>
+                <td>88</td>
+                <td>77</td>
+            </tr>
+            <tr>
+                <td>김길동</td>
+                <td>99</td>
+                <td>88</td>
+                <td>77</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">1 2 3</td>
+            </tr>
+        </tfoot>
+   </table>
+   <table>
+    
 
-<tbody>
-    <tr>
-        <td>aaa1</td>
-        <td>aaa2</td>
-        <td>aaa3</td>
-        <td>aaa4</td>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-    </tr>
-    <tfoot>
-        <tr>
-            <td colspan="4">1 2 3</td>
-        </tr>
-    </tfoot>
-</tbody>
-    </table>
+    <table id="t02">
+        <!-- <col><col><col><col> 생략가능-->
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>김길동</td>
+                <td>99</td>
+                <td>88</td>
+                <td>77</td>
+            </tr>
+            <tr>
+                <td>김길동</td>
+                <td>99</td>
+                <td>88</td>
+                <td>77</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">1 2 3</td>
+            </tr>
+        </tfoot>
+   </table>
+   <table>
+
+
+    
+    
 </body>
 </html>
