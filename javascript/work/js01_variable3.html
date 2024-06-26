@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수 종류</title>
+    <script src="js01_js.js"></script>
+    <script>
+        console.log("잘못입력하셨습니다.");
+        //alert("잘못입력하셨습니다.");//경고창
+        //화면에 h3영역에 잘못입력하셨습니다. 가 출력이 되도록 해보자.
+        window.onload = function(){
+            console.log("onload....");
+            document.getElementById("h01").innerText = "잘못입력하셨습니다.";
+
+            document.getElementById("btn_ok").onclick = function(){
+                console.log("onclick...");
+                //let name = "kim";
+                //let name = prompt("이름을 입력하세요");
+                let name = document.getElementById("name").value;
+                console.log("입력한 이름을 " + name + "입니다.");
+                document.getElementById("h02").innerText = name;
+                
+            };
+
+            document.getElementById("btn_tel").onclick = function(){
+                console.log("onclick...");
+                let tel = document.getElementById("tel").value;
+                console.log(tel);
+                document.getElementById('h03').innerText = tel;
+            };
+
+        };
+        //let con = confirm("정말삭제합니까?");
+        //console.log(con);//true,false
+    </script>
+</head>
+<body>
+    <h1>javascript</h1>
+    <h3 id="h01">여기에 잘못입력했다고 변경되도록 코딩</h3>
+    <h3 id="h02">여기에 입력받은 이름이 출력되도록 코딩</h3>
+    <input type="text" id="name" value="kim">
+    <button id="btn_ok">OK</button>
+    <hr>
+    <h2 id="h03">전화번호가 나오도록 해보세요</h2>
+    <input type="text" id="tel" value="010">
+    <button id="btn_tel">tel</button>
+</body>
+</html>

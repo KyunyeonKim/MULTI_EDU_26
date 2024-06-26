@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수 종류</title>
+    <script>
+       console.log("hello...1");
+       console.log("hello...2");
+       console.log("hello...3");
+
+
+       //데이터들의 표현 방식
+       //"문자열" , "문자열" , '문자열a-z A-Z한글...', 문자열+변수 표현식
+       //숫자 : 123, 3.14
+       //참거짓: true , false
+       //배열 : [] , [1,2,3] . ['aaa' , 'bbb']
+       //객체:{} , {name:"kim", age:33}
+
+       //상기의 데이터들을 변수에 할당 (대입)해서 사용한다
+       //변수 선언 방법 또는 종류
+
+       //1.var변수 - 문서내에 동일한 변수명을 사용할수있다.
+       var name = "kim";
+       console.log(name);
+       var name = "lee";
+       console.log(name);
+       console.log(typeof(name)); //string time
+
+       //변수값 변경(초기화)
+       name = "han";
+       console.log(name);
+
+       var kor; //변수 선언만한것(변수에는 아무것도 할당안됨.)
+       console.log(kor);//undefined - 아무것도 할당 안됨
+       kor = 99;
+       console.log(kor);
+       console.log(typeof(kor)); // number type
+
+
+
+    //2.let변수
+    //    let name = "yang";
+    //    console.log(name);
+       let name2 = "yang";
+       console.log(name2);
+       let name3 = "yang";
+       console.log(name3);
+
+       name3 = "lee";
+       console.log(name3);
+
+       let eng;
+       console.log(eng);
+       
+
+
+
+       //3.var,let 아무것도 안붙이는 변수
+       //함수 내부에서 전역변수 처리시에 가끔 사용
+       message1 = "hello";
+       console.log(message1);
+
+      //4.const 값을 변경할수 없도록 지정하는 변수, 동일 변수명 지정불가
+        const email = "aaa@aaa.com";
+        console.log(email);
+
+
+    </script>
+</head>
+<body>
+    <h1>javascript</h1>
+
+   
+</body>
+</html>

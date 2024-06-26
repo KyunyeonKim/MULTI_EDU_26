@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수 종류</title>
+    
+    <script>
+        console.log("hello");
+
+        // 1+ 연산으로 결합
+        let name = "lee";
+        let age = 33;
+        console.log("나의 이름은" + name + "입니다. 나이는" + age + "세입니다.");
+
+        // 2+ 문자열을 이용하는 방법
+        let info2 = `나의 이름은 ${name}입니다, 나이는 ${age}세 입니다`;
+        console.log(info2);
+
+
+
+        window.onload = function(){
+            let name = "lee";
+        let age = 33;
+        let info = `나의 이름은 ${name}입니다, 나이는 ${age}세 입니다`;
+        console.log("나의 이름은" + name + "입니다. 나이는" + age + "세입니다.");
+
+        document.querySelector("#d01").innerHTML = info
+        
+        let info2 = `나의 이름은 ${name}입니다, 나이는 ${age}세 입니다`;
+        console.log(info2);
+        document.querySelector('#do2').innerHTML = info2;
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>javascript</h1>
+    <div id="d01"></div>
+    <div id="d02"></div>
+</body>
+</html>
