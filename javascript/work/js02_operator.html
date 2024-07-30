@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        console.log("hello...");
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script>
+    console.log("hello...");
 
-        let su1 = 10;
-        let su2 = 3;
+    let su1 = 10;
+    let su2 = 3;
 
-        //1.산술연산자
+    //1.산술연산자
 
-        console.log(su1+su2);
-        console.log(su1-su2);
-        console.log(su1*su2);
-        console.log(su1/su2);
+    console.log(su1+su2);
+    console.log(su1-su2);
+    console.log(su1*su2);
+    console.log(su1/su2);
 
-        let res = su1 / su2 ;
+    let res = su1 / su2 ;
 
-console.log(parseInt(res));
-console.log(parseInt(res));
+    console.log(parseInt(res));
+    console.log(res.toFixed(3));
+    console.log(su1 % su2);
+    console.log(su1 ** su2);
 
+    console.log(1+2*3+4);
+    let res2 = (1+2)*(3-4);
 
-    </script>
+    //2증감연산자 (1씩증가,1씩 감소) ++,-- : 단항연산자
+    let x = 10;
+    ++x;
+    x++;
+    ++x;
+    console.log(x);
+
+    let y = x++;
+    console.log(x);
+    console.log(y);
+
+</script>
 </head>
 <body>
-    <h1>operator</h1>
+<h1>operator</h1>
 </body>
 </html>
