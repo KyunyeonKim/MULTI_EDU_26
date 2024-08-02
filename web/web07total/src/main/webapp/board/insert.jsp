@@ -65,27 +65,23 @@
 <body>
 <jsp:include page="../top_menu.jsp"/>
 <div>
-  <h1>회원가입 페이지</h1>
-  <form action="m_insertOK.do" method="post">
+  <h1><%= "게시글 작성 페이지"%></h1>
+  <form action="b_insertOK.do" method="post">
     <table id="insertTable">
       <tr>
-        <td><label for="id">ID</label></td>
-        <td><input type="text" id="id" name="id" value="admin" placeholder="ID를 입력하세요"></td>
+        <td><label for="title">제목</label></td>
+        <td><input type="text" id="title" name="title" value="Serlvet...제목" placeholder="제목을 입력하세요"></td>
       </tr>
       <tr>
-        <td><label for="pw">PW</label></td>
-        <td><input type="text" id="pw" name="pw" value="hi1111" placeholder="PW를 입력하세요"></td>
+        <td><label for="content">내용</label></td>
+        <td><textarea name="content" id="content" cols="30" rows="10">Hello java내용</textarea></td>
       </tr>
       <tr>
-      <tr>
-        <td><label for="name">NAME</label></td>
-        <td><input type="text" id="name" name="name" value="kim" placeholder="NAME를 입력하세요"></td>
+        <td><label for="writer">작성자</label></td>
+        <td>admin1<input type="hidden" id="writer" name="writer" value="admin1"></td>
       </tr>
       <tr>
-        <td><label for="tel">TEL</label></td>
-        <td><input type="text" id="tel" name="tel" value="010" placeholder="TEL를 입력하세요"></td>
-      </tr>
-        <td colspan="2"><input type="submit" value="가입완료"></td>
+        <td colspan="2"><input type="submit" value="글쓰기 완료"></td>
       </tr>
     </table>
   </form>

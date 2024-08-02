@@ -1,4 +1,4 @@
-package com.example.web04member;
+package com.example.web07total.member;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -8,7 +8,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet({"/m_insert.do","/m_update.do","/m_delete.do",

@@ -1,4 +1,4 @@
-package com.example.web04member;
+package com.example.web07total.member;
 
 public class MemberVO {
     private int num;

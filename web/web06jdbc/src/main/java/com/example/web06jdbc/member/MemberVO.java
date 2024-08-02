@@ -1,4 +1,4 @@
-package com.example.web04member;
+package com.example.web06jdbc.member;
 
 public class MemberVO {
     private int num;
@@ -7,17 +7,7 @@ public class MemberVO {
     private String name;
     private String tel;
 
-    @Override
-    public String toString() {
-        return "MemberVO{" +
-                "num=" + num +
-                ", id='" + id + '\'' +
-                ", pw='" + pw + '\'' +
-                ", name='" + name + '\'' +
-                ", tel='" + tel + '\'' +
-                '}';
-    }
-
+    // Getter and Setter methods
     public int getNum() {
         return num;
     }
@@ -56,5 +46,10 @@ public class MemberVO {
 
     public void setTel(String tel) {
         this.tel = tel;
+    }
+
+    @Override
+    public String toString() {
+        return "MemberVO [num=" + num + ", id=" + id + ", pw=" + pw + ", name=" + name + ", tel=" + tel + "]";
     }
 }
