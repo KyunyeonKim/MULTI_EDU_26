@@ -326,4 +326,74 @@ public class MemberDAOimpl implements MemberDAO{
         }
         return list;
     }
+
+    @Override
+    public int login(String id, String password) {
+        String sql = "SELECT COUNT(*) FROM member WHERE id = ? AND pw = ?";
+        try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            // SQL 쿼리 준비
+            pstmt.setString(1, id);
+            pstmt.setString(2, password);
+
+            // 쿼리 실행
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    int count = rs.getInt(1);
+                    return count > 0 ? 1 : 0; // 로그인 성공 또는 실패
+                }
+                return -1; // 쿼리 실행 실패
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // 로그를 남기세요
+            return -1; // 예외 발생 시 실패 코드 반환
+        }
+    }
+
+    public boolean checkPw(String id , String pw) {
+        boolean isAvailable = true;
+
+        try {
+            conn = DriverManager.getConnection(URL, USER, PASSWORD);
+            String sql = "SELECT COUNT(*) FROM member WHERE id =? pw=?";
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, id);
+            pstmt.setString(2, pw);
+
+            rs = pstmt.executeQuery();
+            if (rs.next()) {
+                int count = rs.getInt(1);
+                if (count > 0) {
+                    isAvailable = false;
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (pstmt != null) {
+                try {
+                    pstmt.close();
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+
+        return isAvailable;
+    }
 }
