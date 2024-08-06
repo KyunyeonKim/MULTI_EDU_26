@@ -10,5 +10,7 @@ public interface MemberDAO {
     public MemberVO selectOne(MemberVO vo);
     public List<MemberVO> selectAll();
     public List<MemberVO> searchList(String searchKey, String searchWord);
+    public int login(String id, String password);
 
+    public boolean checkPw(String id,String pw);
 }

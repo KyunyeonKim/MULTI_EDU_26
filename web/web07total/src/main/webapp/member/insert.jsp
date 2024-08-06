@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!DOCTYPE html>
 <html lang="en">
+
+
+
 
 <head>
   <meta charset="UTF-8">
@@ -62,6 +66,24 @@
   </style>
 </head>
 
+
+<script>
+  $(document).ready(function() {
+    $("#checkBtn").click(function() {
+      var id = $("#id").val();
+      var password = $("#pw").val();
+      $.ajax({
+        url: 'checkPassword.do',
+        type: 'POST',
+        data: { pw: password, id:id },
+        success: function(response) {
+          $("#result").text(response);
+        }
+      });
+    });
+  });
+</script>
+
 <body>
 <jsp:include page="../top_menu.jsp"/>
 <div>
@@ -73,10 +95,11 @@
         <td><input type="text" id="id" name="id" value="admin" placeholder="ID를 입력하세요"></td>
       </tr>
       <tr>
-        <td><label for="pw">PW</label></td>
-        <td><input type="text" id="pw" name="pw" value="hi1111" placeholder="PW를 입력하세요"></td>
+        <td>PW:</td>
+        <td><input type="password" id="pw" name="pw" placeholder="PW를 입력하세요"></td>
+        <td><button type="button" id="checkPwButton">비밀번호 확인</button></td>
+        <td><span id="pwResult"></span></td>
       </tr>
-      <tr>
       <tr>
         <td><label for="name">NAME</label></td>
         <td><input type="text" id="name" name="name" value="kim" placeholder="NAME를 입력하세요"></td>
