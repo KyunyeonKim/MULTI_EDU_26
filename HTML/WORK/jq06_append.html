@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+
+    <script>
+        
+        $(function(){
+            console.log("ready...");
+            //대상의 하위노드에 추가-기존하위 다음에 추가
+            $("#div01").append("<strong>javascript1</strong>");
+            $("#div01").append("<strong>javascript2</strong>");
+
+            //대상의 하위노드에 추가-기하위 이전에 추가
+            $("#div02").prepend("<strong>javascript1</strong>");
+            $("#div02").prepend("<strong>javascript2</strong>");
+
+            //대상의 이전에추가
+            $("img").before("<strong>css</strong>");
+
+            //대상의 이후에추가
+            $("img").after("<strong>css</strong>");
+        });
+    </script>
+</head>
+<body>
+    <h1>hello</h1>
+    <div id="div01">
+        <strong>jquery</strong>
+    </div>
+    <div id="div02">
+        <strong>jquery</strong>
+    </div>
+    <img src="images/0001.png" alt="">
+</body>
+</html>

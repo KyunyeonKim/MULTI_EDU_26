@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <style>
+        .headLine{
+            background-color: aquamarine;
+            color: chocolate;
+        }
+        .content{
+            background-color: rgb(34, 73, 60);
+            color: rgb(255, 239, 228);
+        }
+    </style>
+    <script>
+        
+        $(function(){
+            console.log("ready...");
+            
+            $("h1,h3,p").addClass("headLine");
+
+            $("div,span").removeClass("content");
+           
+        });
+    </script>
+</head>
+<body>
+    <h1>hello</h1>
+    <h3>javascript</h3>
+    <p>jquery</p>
+    <div class="content">css</div>
+    <span class="content">java</span>
+    
+</body>
+</html>
