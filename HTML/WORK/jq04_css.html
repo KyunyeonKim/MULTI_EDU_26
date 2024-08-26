@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <style>
+        h1{
+            background-color: aquamarine;
+            color: chocolate;
+        }
+    </style>
+    <script>
+        
+        $(function(){
+            console.log("ready...");
+            
+            console.log($("h1").css("background-color"));//rgb(127, 255, 212)
+            console.log($("h1").css("color"));//rgb(210, 105, 30)
+
+            $("#h001").css("background-color","blue");
+            $("#h001").css("color","white");
+
+            $("#h002").css("background-color","blue").css("color","white");
+
+            $("#h003").css(
+                {
+                    "background-color":"black",
+                    "color":"white",
+                    "font-size":"50pt"
+                }
+            );
+        });
+    </script>
+</head>
+<body>
+    <h1>hello</h1>
+    <h1 id="h001">hello</h1>
+    <h1 id="h002">hello</h1>
+    <h1 id="h003">hello</h1>
+    
+</body>
+</html>

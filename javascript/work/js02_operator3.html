@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello...");
+
+       //1.비트연산자 &,|,^
+       //비트단위 : 1bit,8bit(1byte),2byte,4byte,8byte,,,32byte,64byte,,,1024byte(1kbyte)
+        //0,1
+        //0000 0000 : 0
+        //0000 0001 : 1
+        //0000 0010 : 2
+        //0000 0100 : 4
+        //0000 1000 : 8
+        //1000 0000 : -128,-127,,,,,
+
+        //10 : 0000 1010
+        //15 : 0000 1111
+        //16 : 0001 0000
+        //3  : 0000 0011
+
+        //& : and연산 - 둘모두 참(1)일때만 참(1)
+        console.log(10 & 3);
+
+        //| : or연산 - 하나라도 참(1)일때는 참(1)
+        console.log(10 | 3);
+
+        //^ : exor연산 - 서로다를때만 참(1)
+        console.log(10 ^ 3);
+
+        //비트연산도 복합할당연산가능
+        let y = 10;
+        y &= 3;
+        console.log(y);
+
+        y = 10;
+        y |= 3;
+        console.log(y);
+
+        //2.쉬프트연산자 : >>, << , >>>
+        //0000 1000 : 8
+        console.log( 8 >> 1);// 1/2
+        console.log( 8 >> 2);// 1/4
+
+        console.log( 8 << 1);
+        console.log( 8 << 2);
+
+        console.log( 8 >>> 2);
+        console.log( -8 >>> 2);//음수는 비트이동으로 양수발생
+
+        //주의점 : 홀수일때는 나머지는 버림
+        console.log( 9 >> 1);// 1/2 : 4
+
+        //쉬프트 연산도 복합할당연산 가능
+        let x = 10;
+        //x값을 2배로 늘리는 방법
+        x *= 2;
+        console.log(x);
+        x <<=1;
+        console.log(x);
+
+        
+
+    </script>
+</head>
+<body>
+    <h1>operator연산자</h1>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+
+<script>
+    let obj = {};
+    let person = new Object();
+    obj.name = "kim";
+    obj.age = 33;
+
+    let student = new Object();
+    student.grade = 6;
+    student.classNumber = 3;
+    console.log(student);
+
+
+    //객체 생성시에 속성값 변경가능
+    class Person{
+    name = "kim"
+    age = "33"
+
+    }
+    let p = new Person();
+
+    class Student{
+
+    kor = 99; // public field, property , attribute
+    eng = 88;
+    #math = 77;
+
+    constructor(kor,eng,math){
+        this.kor = kor;
+        this.eng = eng;
+        this.#math = math;
+    }
+    }
+
+
+    let st = new Student;
+    console.log(st.kor + st.eng);
+    console.log(st);
+
+
+    st.kor = 100;
+    
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

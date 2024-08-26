@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="test.com.product">
+
+	<select id="P_SELECT_ALL"
+		resultType="test.com.product.model.ProductVO">
+		select * from product order by num desc
+	</select>
+
+	<select id="P_SEARCH_LIST_PNAME"
+		resultType="test.com.product.model.ProductVO">
+		select * from product where pname like #{searchWord} order by
+		num desc
+	</select>
+
+	<select id="P_SEARCH_LIST_MODEL"
+		resultType="test.com.product.model.ProductVO">
+		select * from product where model like #{searchWord} order
+		by num desc
+	</select>
+
+
+	<select id="P_SELECT_ONE"
+		resultType="test.com.product.model.ProductVO">
+		select * from product where num=#{num}
+	</select>
+
+
+	<insert id="P_INSERT">
+		insert into product(num,pname,model,price,count)
+		values(seq_product.nextval,#{pname},#{model},#{price},#{count})
+	</insert>
+
+	<update id="P_UPDATE">
+		update product set pname=#{pname},model=#{model},
+		price=#{price},count=#{count}
+		where num=#{num}
+	</update>
+
+	<delete id="P_DELETE">
+		delete from product where num=#{num}
+	</delete>
+
+</mapper>

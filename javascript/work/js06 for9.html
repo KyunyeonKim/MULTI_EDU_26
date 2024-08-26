@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hy</title>
+    <script>
+        
+        let arr = [];
+        console.log("arr.length" + arr.length);
+
+        for(let i=0; i<5; i++){
+            arr.push(i);
+        }
+
+        console.log(arr);
+        console.log("arr.length" + arr.length);
+
+        console.log(arr.pop());
+        console.log(arr);
+        console.log("arr.length"+arr.length);
+        console.log(arr.pop());
+        console.log(arr);
+        console.log("arr.length"+arr.length);
+
+
+        
+
+        //0번 인덱스 데이터를 뽑아내는 함수
+        //나머지 데이터들은 다시 0번부터 배치
+        arr.shift();
+        arr.shift();
+        console.log(arr);
+        console.log("arr.length"+arr.length);
+
+        for(let i=0; i<arr.length; i++){
+            console.log(arr[i]);
+        }
+
+        console.log("============================");
+
+        for(const i in arr){
+            console.log(arr[i]);
+        }
+
+        
+        arr.forEach(function(item,i){
+            console.log(item,arr[i],i);
+        })
+
+        //멀타 배열이 - 배열안에 배열이 올 수 있다. 
+        let arrs = [[11,22,33],[44,55,66]];
+
+
+
+        console.log(arrs[0][0]);
+        console.log(arrs[0][1]);
+        console.log(arrs[0][2]);
+
+
+        for(let i = 0; i<arrs[0].length; i++){
+            console.log(arrs[0][i]);
+        }
+
+        for(let i = 0; i<arrs[0].length; i++){
+            console.log(arrs[0][i]);
+        }
+
+
+        console.log("=============")
+
+       //중첩 일반for로 한번에 출력하기
+        for(let x = 0; x<arrs.length; x++){
+            for(let i = 0; i<arrs[x].length; i++){
+            console.log(arrs[x][i]);
+        }
+        }
+
+        console.log("=============")
+
+         //중첩for in으로 출력하기
+
+        for (let x in arrs) {
+        for (let i in arrs[x]) {
+        console.log(arrs[x][i]);
+        }
+        }
+
+
+        console.log("=============")
+
+        //중첩for Each함수로 출력하기
+        arrs.forEach(function(arr){
+            arr.forEach(function(item){
+                console.log(item);
+            })
+        })
+
+
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

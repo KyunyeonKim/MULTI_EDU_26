@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수 종류</title>
+    <script>
+        window.onload = function() {
+            document.getElementById('btn').addEventListener('click', function() {
+                let kor = parseInt(document.getElementById('i_kor').value);
+                let eng = parseInt(document.getElementById('i_eng').value);
+                let math = parseInt(document.getElementById('i_math').value);
+
+                let avg = (kor + eng + math) / 3;
+
+                let grade = avg >= 90 ? 'A' :
+                            avg >= 80 ? 'B' :
+                            avg >= 70 ? 'C' :
+                            avg >= 60 ? 'D' : 'F';
+
+                let result = document.getElementById('result');
+                result.innerHTML = `<p>성적: 국어: ${kor}, 영어: ${eng}, 수학: ${math}</p>
+                                       <p>평균 성적: ${avg}</p>
+                                       <p>학점: ${grade}</p>`;
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>javascript</h1>
+    <div id="grade"></div>
+
+    <h1>성적처리미션</h1>
+
+    <label>국어:</label>
+    <input type="number" id="i_kor" value="0"><br>
+
+    <label>영어:</label>
+    <input type="number" id="i_eng" value="0"><br>
+
+    <label>수학:</label>
+    <input type="number" id="i_math" value="0"><br>
+
+    <button id="btn">계산하기</button>
+
+    <div id="result"></div>
+</body>
+</html>
