@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>selectOne.html</title>
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body th:replace="~{layout::layout}">
+
+	<div th:fragment="content">
+		<h1>selectOne.html</h1>
+
+		<div>
+			<table id="insertTable">
+				<thead>
+					<tr>
+						<th>NUM</th>
+						<th>TITLE</th>
+						<th>content</th>
+						<th>WRITER</th>
+						<th>WDATE</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>[[${vo2.num}]]</td>
+						<td>[[${vo2.title}]]</td>
+						<td>[[${vo2.content}]]</td>
+						<td>[[${vo2.writer}]]</td>
+						<td>[[${vo2.wdate}]]</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<a th:href="|/board/update?num=${vo2.num}|">글수정</a> <a
+			th:href="|/board/delete?num=${vo2.num}|">글삭제</a>
+
+
+	</div>
+
+</body>
+</html>

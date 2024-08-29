@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>insert.html</title>
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body th:replace="~{layout::layout}">
+
+	<div th:fragment="content">
+		<h1>insert.html</h1>
+
+		<form action="/board/insertOK" method="post">
+			<table id="insertTable">
+				<tr>
+					<td><label for="title">title</label></td>
+					<td><input type="text" id="title" name="title" value="springboot"
+						placeholder="title를 입력하세요"></td>
+				</tr>
+				<tr>
+					<td><label for="content">content</label></td>
+					<td><textarea rows="10" cols="20" id="content" name="content">Hello spring</textarea></td>
+				</tr>
+
+				<tr>
+					<td><label for="writer">writer</label></td>
+					<td><input type="text" id="writer" name="writer" value="admin1"
+						placeholder="writer를 입력하세요"></td>
+				</tr>
+				
+				<tr>
+					<td colspan="2"><input type="submit" value="작성완료"></td>
+				</tr>
+			</table>
+		</form>
+
+
+	</div>
+
+
+</body>
+</html>
